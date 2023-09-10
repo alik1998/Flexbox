@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar (responsive)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: goldenrod;
+        padding: 0 20px;
+      }
+      #logo {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        align-self: center;
+        padding: 10px;
+      }
+
+      #list {
+        list-style-type: none;
+        display: flex;
+      }
+      #list a {
+        display: block;
+        padding: 16px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      #list a:hover {
+        background-color: rgb(233, 184, 61);
+      }
+      #nav li:last-child {
+        display: none;
+      }
+
+      #nav li:last-child {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        #nav {
+          position: relative;
+          flex-direction: column;
+        }
+        #nav a {
+          align-self: flex-start;
+        }
+        #list {
+          flex-direction: column;
+        }
+        #list a {
+          text-align: center;
+          padding: 10px;
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+          border-bottom: 1px solid rgba(0, 0, 255, 0.1);
+        }
+        #nav li:last-child {
+          display: block;
+          position: absolute;
+          top: 0px;
+          right: 10px;
+        }
+        #nav #list li:not(:last-child) {
+          display: none;
+        }
+
+        .navigation li:last-child a {
+          border-bottom: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- hamburger iconuna tıklanıldığında  nav id si silinmeli js ile yapılabilir  -->
+    <nav id="nav">
+      <a id="logo" href="">logo</a>
+      <ul id="list">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact</a></li>
+        <li>
+          <a href=""><i class="fa fa-bars"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
